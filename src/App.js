@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Banner from "./components/Banner/Banner";
+import Layout from "./components/Layout/Layout";
+import Portfolio from "./components/Portfolio/Portfolio";
+import VideoAssociation from "./components/VideoAssociation/VideoAssociation";
+import "./css/custom.css";
+import "./css/animate.css";
+import "./css/responsive.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Banner />
+      <VideoAssociation />
+      <Portfolio />
+    </Layout>
   );
 }
 
