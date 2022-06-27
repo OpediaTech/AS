@@ -16,6 +16,10 @@ function Layout({ children }) {
     }, 4);
   }
 
+  useEffect(() => {
+    console.log(Window.scrollY);
+  }, [Window.scrollY]);
+
   return (
     <div className="">
       {/* <div className="vpma-program-page"> */}

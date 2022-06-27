@@ -1,5 +1,5 @@
 import React from "react";
-import footerLogo from "../../images/footer-logo.png";
+import { FiPhoneCall } from "react-icons/fi";
 
 // logo
 import logo from "../../images/vpma-page-navbar-logo.png";
@@ -15,7 +15,12 @@ function Header() {
       <div className="header-contact">
         <div className="contact-number">
           <div className="contact-phone">
-            <a href="tel:8008206020">(800) 820-6020</a>
+            <a href="tel:8008206020">
+              <span className="phonespan">
+                <FiPhoneCall />
+              </span>
+              (800) 820-6020
+            </a>
           </div>
         </div>
       </div>

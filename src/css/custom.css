@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -494,6 +496,10 @@ form div.wpcf7-mail-sent-ok {
 #colophon.site-footer .widget-area > * {
   margin-top: 0;
   margin-bottom: 0;
+}
+.phonespan {
+  margin: 0px 10px;
+  font-size: 25px;
 }
 
 div.wpcf7 .ajax-loader,
@@ -1524,6 +1530,7 @@ body.vpma-program-page .header-contact .contact-phone a:hover {
   position: relative;
   pointer-events: none;
   display: block;
+  cursor: pointer;
 }
 
 .portfolio-blog-warp .portfolio-video a img {
@@ -1775,3 +1782,74 @@ body.vpma-program-page.error404 .header-contact .contact-phone a::before {
  font-family: 'Poppins', sans-serif; 
 
  */
+
+.modal-custome {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 850px;
+  height: 500px;
+  background-color: #fff;
+  animation-name: modalAnimation;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  padding: 8px;
+
+  position: relative;
+}
+
+@keyframes modalAnimation {
+  0% {
+    width: 80px;
+    height: 80px;
+  }
+  25% {
+    width: 800px;
+    height: 100px;
+  }
+  50% {
+    width: 850px;
+    height: 500px;
+  }
+  100% {
+    width: 850px;
+    height: 500px;
+  }
+}
+
+.cross {
+  cursor: pointer;
+  background-color: #c50202;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+.cross:hover {
+  cursor: pointer;
+  background-color: #8e0707;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.contect-details-box .menu li a {
+  cursor: pointer !important;
+}
+.contect-details-box .menu li a:hover {
+  color: rgb(237, 9, 9) !important;
+}
