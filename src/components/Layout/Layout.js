@@ -1,9 +1,15 @@
 import React, { useEffect, useState } from "react";
+
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 
+import { MdKeyboardArrowUp } from "react-icons/md";
+
 function Layout({ children }) {
   const [showTop, setShowTop] = useState(true);
+  const [showOrHide, setShowOrHide] = useState(false);
+
+  // function for animation
   function animateToTop(e) {
     e.preventDefault();
     var scrollToTop = window.setInterval(function () {
@@ -17,20 +23,34 @@ function Layout({ children }) {
   }
 
   useEffect(() => {
-    console.log(Window.scrollY);
-  }, [Window.scrollY]);
+    let previousPosition =
+      window.pageYOffset || document.documentElement.scrollTop;
+
+    window.addEventListener("scroll", (e) => {
+      let scrolTop = e.target.documentElement.scrollTop;
+      let currentPosition = e.target.documentElement.scrollTop;
+      console.log(typeof currentPosition);
+      if (currentPosition > 200) {
+        setShowOrHide(true);
+      } else {
+        setShowOrHide(false);
+      }
+    });
+  }, []);
 
   return (
     <div className="">
-      {/* <div className="vpma-program-page"> */}
       <Header />
       {children}
       <Footer />
-      {showTop && (
+
+      {showOrHide && (
         <div className="tp" onClick={(event) => animateToTop(event)}>
-          <a className="top-btn" href="javascript:void(0)">
-            {" "}
-          </a>
+          <p className="top-btn1">
+            <span className="top-span">
+              <MdKeyboardArrowUp />
+            </span>
+          </p>
         </div>
       )}
     </div>

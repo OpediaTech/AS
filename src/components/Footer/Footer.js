@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+import WOW from "wowjs";
 import footerBanner from "../../images/vpma-footer-img.png";
 import Copyright from "./Copyright";
 
 import { InlineWidget } from "react-calendly";
 
 function Footer() {
+  useEffect(() => {
+    new WOW.WOW({
+      live: false,
+    }).init();
+  }, []);
   return (
     <section className="section-gapping help-section vpma-help-section">
       <div className="container vc_col-sm-12">
@@ -21,7 +27,7 @@ function Footer() {
                 best for you…
               </p>
             </div>
-            <div style={{ height: "450px" }} className="day-select">
+            <div className="day-select callender-height">
               <InlineWidget url="https://calendly.com/jimwacksman/jim?hide_event_type_details=1e" />
             </div>
           </div>

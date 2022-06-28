@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
+import WOW from "wowjs";
 
 import Backdrop from "@mui/material/Backdrop";
-import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Button from "@mui/material/Button";
@@ -68,6 +68,12 @@ function Portfolio() {
   const [VIdeo, setVIdeo] = React.useState("");
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  useEffect(() => {
+    new WOW.WOW({
+      live: false,
+    }).init();
+  }, []);
   return (
     <section class="section-gapping live-action-section vpma-portfolio-section">
       <div class="vc_row">
@@ -97,10 +103,10 @@ function Portfolio() {
                       >
                         <img src={item.image} alt="portfolio-image" />
                       </a>
-                      <span style={{ opacity: "0" }}>
+                      <span style={{ display: "none" }}>
                         <Button onClick={handleOpen}>Open modal</Button>
                       </span>
-                      <p>{PorffolioData[index].title}</p>
+
                       {/* <Player
                         open={this.state.open}
                         toggleModal={this.onOpenModal}
@@ -133,6 +139,8 @@ function Portfolio() {
                           // src="https://www.youtube.com/embed/zTdlagjiMuE"
                           title="YouTube video player"
                           frameborder="0"
+                          // width="100%"
+                          // height="100%"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowfullscreen
                         ></iframe>

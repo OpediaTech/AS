@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
+import WOW from "wowjs";
 
 function Banner() {
+  useEffect(() => {
+    new WOW.WOW({
+      live: false,
+    }).init();
+  }, []);
   return (
     <section class="vpma-banner-section">
       <div class="home-banner">
         <div class="vc_col-sm-12">
           <div class="banner-content container">
-            <div class="left vc_col-sm-6 wow fadeInLeft">
+            <div class="wow fadeInDown left vc_col-sm-6 wow fadeInLeft">
               <h2 class="banner-title">
                 Consequat Vel Illum <em>Dolore Feugiat Facilisis</em>
               </h2>

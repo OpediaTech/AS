@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import videoData from "./VideoData";
+import WOW from "wowjs";
 
 import videoBanner from "../../images/vpma-video-association-img.png";
 
 function VideoAssociation() {
+  useEffect(() => {
+    new WOW.WOW({
+      live: false,
+    }).init();
+  }, []);
   return (
     <section class="section-gapping videos-association vpma-videos-association">
       <div class="container left-right-warp">

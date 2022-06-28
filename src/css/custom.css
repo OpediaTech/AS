@@ -459,19 +459,49 @@ form div.wpcf7-mail-sent-ok {
   transition: 0.5s all;
   scroll-behavior: smooth;
   font-size: 0;
-  background: #d10000 !important;
+  background: #ca1313 !important;
   cursor: pointer;
 }
-
-.top-btn::before {
-  content: "Top";
-  /* content: "\f106"; */
-  /* font-size: 36px; */
-  font-size: 16px;
+.top-btn1 {
+  background: #ca1313 !important;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  top: auto;
+  right: 45px;
+  left: auto;
+  bottom: 98px;
+  z-index: 9;
+  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  transition: 0.5s all;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-span {
+  display: flex;
+  scroll-snap-align: center;
+  font-size: 36px;
   color: white;
 }
+.callender-height {
+  height: 450px;
+}
+/* .top-btn::before {
+  content: "Top"; */
+/* content: "\f106"; */
+/* font-size: 36px; */
+/* font-size: 16px;
+  color: white;
+} */
 
-.top-btn:hover {
+.top-btn1:hover {
   background: black !important;
   color: #fff !important;
 }
@@ -586,6 +616,7 @@ body .site-header {
   bottom: auto;
   z-index: 9;
   justify-content: space-between;
+  transition: 0.5s ease-in-out;
 }
 
 .site-header .site-logo a.custom-logo-link {
@@ -1602,7 +1633,6 @@ body.vpma-program-page .header-contact .contact-phone a:hover {
 /*====help-section VPMA==============*/
 .section-gapping.help-section.vpma-help-section {
   padding-top: 162px;
-  pointer-events: none;
 }
 
 .help-section.vpma-help-section .common-title::before {
@@ -1794,9 +1824,15 @@ body.vpma-program-page.error404 .header-contact .contact-phone a::before {
   animation-name: modalAnimation;
   animation-duration: 3s;
   animation-iteration-count: 1;
-  padding: 8px;
+  padding: 0px 15px;
 
   position: relative;
+}
+.phonespan2 {
+  display: none;
+}
+.phonespan {
+  display: block;
 }
 
 @keyframes modalAnimation {
@@ -1847,9 +1883,30 @@ body.vpma-program-page.error404 .header-contact .contact-phone a::before {
   font-size: 12px;
 }
 
+/* 
 .contect-details-box .menu li a {
   cursor: pointer !important;
 }
+
+.footermenu li a {
+  background-color: red !important;
+  cursor: pointer !important;
+}
+
+.footermenu li a:hover {
+  cursor: pointer !important;
+  color: rgb(237, 9, 9) !important;
+  background-color: rgb(255, 255, 255) !important;
+}
+
 .contect-details-box .menu li a:hover {
   color: rgb(237, 9, 9) !important;
 }
+.site-info {
+  z-index: -999999999999999999 !important;
+}
+.footer-copyright .left a .hvr:hover {
+  cursor: pointer !important;
+
+  background-color: red !important;
+} */

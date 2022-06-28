@@ -1,4 +1,6 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
+import WOW from "wowjs";
+
 import Layout from "./components/Layout/Layout";
 import "./css/custom.css";
 import "./css/animate.css";
@@ -15,6 +17,11 @@ const VideoAssociation = React.lazy(() =>
 );
 
 function App() {
+  useEffect(() => {
+    new WOW.WOW({
+      live: false,
+    }).init();
+  }, []);
   return (
     <Layout>
       {/* <Banner />

@@ -25,8 +25,10 @@ function Copyright() {
         <div className="footer-copyright">
           <div className="left">
             <span>&copy;</span> 2022&nbsp;
-            <a href="index.html">Association Studios</a>.&nbsp;All Rights
-            Reserved.
+            <a href="index.html">
+              <span className="hvr">Association Studios</span>{" "}
+            </a>
+            .&nbsp;All Rights Reserved.
           </div>
           <div className="right contect-details-box">
             <ul className="menu">
